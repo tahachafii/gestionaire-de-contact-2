@@ -1,0 +1,134 @@
+:root {
+    --primary: #3498db;
+    --primary-dark: #2980b9;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --bg: #f9f9f9;
+    --text: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  #search {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    border-color: var(--primary);
+    outline: none;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  #contactList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #contactList li {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .contact-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .contact-actions button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-actions .edit-btn {
+    background: var(--warning);
+    color: white;
+  }
+  
+  .contact-actions .delete-btn {
+    background: var(--danger);
+    color: white;
+  }
+  
+  .contact-actions i {
+    margin: 0;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .contact-actions {
+      position: static;
+      margin-top: 10px;
+      justify-content: flex-end;
+    }
+  }
+  
